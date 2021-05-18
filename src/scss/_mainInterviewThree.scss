@@ -1,0 +1,85 @@
+body {
+    #{selector-unify("section","#main-interview-three")} {
+        height: 100vh;
+        background-color: $light-main-color;
+        display: flex;
+        flex-wrap: wrap;
+
+        & > div {
+            flex: 0 0 50%;
+            margin: auto;
+            @include breakpoint($mobile-break-point) {
+                flex: 0 0 100%;
+            }
+            &.left-side {
+                @include breakpoint($mobile-break-point) {
+                    order: 2;
+                }
+
+                & > div.decription-container {
+                    padding-left: 18%;
+                    @include breakpoint($mobile-break-point) {
+                        padding-left: 0;
+                    }
+                    & > h1.title {
+                        font-family: lobster;
+                        font-size: 48px;
+                        color: rgb(50, 50, 50);
+                        & > span {
+                            color: darken($dark-main-color, 5);
+                            text-shadow: -3px 5px rgb(0 0 0 / 90%);
+                        }
+                        @include breakpoint($mobile-break-point) {
+                            font-size: 32px;
+                            text-align: center;
+                        }
+                    }
+
+                    & > p.description {
+                        text-align: left;
+                        margin-top: 8%;
+                        color: lighten($body-font-color, 20);
+                        font-size: 20px;
+                        font-weight: bold;
+                        padding-right: 10%;
+                        @include breakpoint($mobile-break-point) {
+                            padding: 20px 10% 0 10%;
+                            text-align: center;
+                            font-size: 16px;
+                            margin-top: 0;
+                            padding-bottom: 14%;
+                        }
+                    }
+                }
+            }
+            &.right-side {
+                background-color: transparent;
+                height: 75%;
+                position: relative;
+                @include breakpoint($mobile-break-point) {
+                    order: 1;
+                    height: 60%;
+                }
+                & > div.img-container {
+                    height: 100%;
+                    width: 99%;
+                    position: absolute;
+                    right: 0;
+                    border-radius: 50% 0 0 50%;
+                    @include breakpoint($mobile-break-point) {
+                        border-radius: 0 0 0 0;
+                        height: 80%;
+                        width: 100%;
+                    }
+                    overflow: hidden;
+                    & > img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: 50% 50%;
+                    }
+                }
+            }
+        }
+    }
+}

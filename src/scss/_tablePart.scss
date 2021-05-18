@@ -1,0 +1,44 @@
+body {
+    #{selector-unify("section" , "#table-part" )} {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        & > div.container {
+            margin: auto;
+            width: 60%;
+            @include breakpoint($mobile-break-point) {
+                width: 100%;
+            }
+
+            & > h1.title {
+                font-family: lobster;
+                color: darken($dark-main-color, 5);
+                font-size: 60px;
+                text-shadow: -3px 5px rgb(0 0 0 / 90%);
+                text-align: center;
+                margin-bottom: 2%;
+            }
+            & > h1.sub-title{
+                text-align: center;
+                margin-bottom: 22%;
+            }
+        }
+        & > div.container > table {
+            width: 100%;
+            border-spacing: 5px;
+
+            & > thead > tr > th {
+                background-color: $dark-main-color;
+            }
+            & > tbody > tr > td {
+                background-color: #eaeaea;
+            }
+            & > thead > tr > th,
+            & > tbody > tr > td {
+                padding: 2% 1%;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+        }
+    }
+}

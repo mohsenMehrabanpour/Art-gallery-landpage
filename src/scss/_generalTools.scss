@@ -1,0 +1,46 @@
+$mobile-break-point: 800px;
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("./../fonts/roboto/roboto-regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: lobster;
+    src: url("./../fonts/Lobster/Lobster-Regular.ttf") format("truetype");
+}
+
+@mixin breakpoint($size) {
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin custom-box-shadow($top, $left, $blur, $spread, $color) {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}

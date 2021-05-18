@@ -1,0 +1,180 @@
+body {
+    font-family: roboto;
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $light-main-color;
+        min-height: 100vh;
+
+        #{selector-unify("section",".header-section")} {
+            flex: 0 0 55%;
+            box-sizing: border-box;
+            padding-left: 100px;
+            padding-top: 60px;
+            @include breakpoint($mobile-break-point) {
+                flex: 0 0 100%;
+                padding: 10px 20px;
+            }
+
+            nav {
+                #menu {
+                    @include breakpoint($mobile-break-point) {
+                        display: none;
+                    }
+                }
+                #menu-btn-check {
+                    display: none;
+                    & ~ #menu-btn::after {
+                        content: "\2261";
+                        font-size: 34px;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                    &:checked ~ #menu {
+                        display: block;
+                    }
+                    &:checked ~ #menu-btn::after {
+                        content: "\02DF";
+                        font-size: 40px;
+                        cursor: pointer;
+                    }
+                }
+                #menu-btn {
+                    display: none;
+                    @include breakpoint($mobile-break-point) {
+                        display: block;
+                    }
+                }
+
+                #{selector-nest("ul","li")} {
+                    display: inline-block;
+                    padding: 5px 20px;
+                    font-size: 20px;
+                    color: $body-font-color;
+                    &.selected {
+                        color: $dark-main-color;
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 80%;
+                            margin-top: 20px;
+                            height: 5px;
+                            background-color: $dark-main-color;
+                        }
+                    }
+                    @include breakpoint($mobile-break-point) {
+                        display: block;
+                        text-align: center;
+                        font-size: 16px;
+                        &.selected::after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+            .title {
+                font-family: lobster;
+                color: darken($dark-main-color, 5);
+                margin-top: 15%;
+                margin-bottom: 5%;
+                font-size: 64px;
+                text-shadow: -3px 5px rgb(0 0 0 / 90%);
+            }
+            .sub-title {
+                margin-bottom: 5%;
+            }
+            .description {
+                text-align: left;
+                color: lighten($body-font-color, 20);
+                font-size: 20px;
+                font-weight: bold;
+                @include breakpoint($mobile-break-point){
+                    padding: 20px 10% 0 10%;
+                    text-align: left;
+                    font-size: 16px;
+                }
+            }
+            #get-start {
+                background-color: darken($dark-main-color, 5);
+                border: none;
+                font-weight: bolder;
+                padding: 20px 40px;
+                cursor: pointer;
+                font-size: 20px;
+                border-radius: 5px;
+                margin-top: 12%;
+                transition: box-shadow 1s;
+                &:hover {
+                    background-color: lighten($dark-main-color, 2);
+                    transition: all 0.5s;
+                    @include custom-box-shadow(2px, 2px, 2px, 2px, black);
+                }
+                &:active {
+                    transform: scale(0.9);
+                    transition: transform 0.01s;
+                }
+                @include breakpoint(800px) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        #{selector-unify("section",".images-section")} {
+            flex: 0 0 45%;
+            overflow: hidden;
+            @include breakpoint($mobile-break-point) {
+                flex: 0 0 100%;
+                padding: 20px 0;
+            }
+            .spatio-ratio {
+                width: 40%;
+                display: inline-block;
+                position: relative;
+                @include breakpoint($mobile-break-point) {
+                    width: 30%;
+                }
+                @media only screen and(min-width:800px) and(max-width:1250px) {
+                    width: 50%;
+                }
+                & > div {
+                    padding-top: 125%;
+                }
+                &#sr-1 {
+                    margin-left: 25%;
+                    animation-name: sr1;
+                    animation-duration: 30s;
+                    animation-timing-function: cubic-bezier(0.26, 0.77, 0.26, 0.77);
+                    animation-iteration-count: infinite;
+                    @include custom-box-shadow(14px, 14px, 16px, -1px, rgba(0, 0, 0, 0.46));
+                    @include breakpoint($mobile-break-point) {
+                        animation-name: none;
+                    }
+                }
+                &#sr-2 {
+                    margin-left: 40%;
+                    margin-top: -20%;
+                    top: 0;
+                    left: 0;
+                    animation-name: sr2;
+                    animation-duration: 30s;
+                    animation-timing-function: cubic-bezier(0.26, 0.77, 0.26, 0.77);
+                    animation-iteration-count: infinite;
+                    @include custom-box-shadow(14px, 14px, 16px, -1px, rgba(0, 0, 0, 0.46));
+                    @include breakpoint($mobile-break-point) {
+                        animation-name: none;
+                    }
+                }
+                .img-1 {
+                    background-image: url("./../images/2.jpg");
+                    background-size: cover;
+                }
+                .img-2 {
+                    background-image: url("./../images/1.jpg");
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}

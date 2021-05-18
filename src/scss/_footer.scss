@@ -1,0 +1,135 @@
+body {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding: 5% 0;
+        & > div {
+            flex: 0 0 25%;
+        }
+        & > div.title {
+            font-family: lobster;
+            font-size: 48px;
+            color: darken($dark-main-color, 5);
+            font-size: 60px;
+            text-align: center;
+            @include breakpoint($mobile-break-point) {
+                flex: 0 0 100%;
+                font-size: 32px;
+                text-align: center;
+            }
+        }
+
+        & > div.link-group-1,
+        & > div.link-group-2 {
+            @include breakpoint($mobile-break-point) {
+                flex: 0 0 50%;
+            }
+        }
+
+        & > div.link-group-1,
+        & > div.link-group-2,
+        & > div.footer-form {
+            padding-top: 3%;
+            @include breakpoint($mobile-break-point) {
+                padding-top: 10%;
+            }
+        }
+
+        & > div.link-group-1 > ul > li,
+        & > div.link-group-2 > ul > li {
+            display: block;
+            padding: 1% 0;
+            padding-left: 1%;
+            color: lighten($body-font-color, 20);
+            font-size: 20px;
+            font-weight: bold;
+            @include breakpoint($mobile-break-point) {
+                font-size: 16px;
+                padding-left: 20%;
+            }
+            & > a:hover {
+                color: black;
+            }
+        }
+
+        & > div.footer-form {
+            color: lighten($body-font-color, 20);
+            font-size: 20px;
+            font-weight: bold;
+            @include breakpoint($mobile-break-point) {
+                font-size: 16px;
+                flex: 0 0 100%;
+            }
+            & > p {
+                @include breakpoint($mobile-break-point) {
+                    text-align: center;
+                    margin-bottom: 5%;
+                }
+            }
+            & > form {
+                @include breakpoint($mobile-break-point) {
+                    display: grid;
+                    width: 100%;
+                }
+            }
+            & > form > input[type="email"] {
+                @include breakpoint($mobile-break-point) {
+                    margin: auto;
+                    margin-bottom: 2%;
+                }
+                background-color: rgb(220, 220, 220);
+                height: 40px;
+                width: 70%;
+                border-radius: 5px;
+                outline: none;
+                padding: 0 10px;
+                border: 2px solid transparent;
+                transition: box-shadow 0.5s;
+                display: block;
+                margin-top: 20%;
+                caret-color: darken($dark-main-color, 20);
+                &:focus {
+                    border: 2px solid $dark-main-color;
+                    transition: all 0.5s;
+                    @include custom-box-shadow(0px, 0px, 24px, -1px, $dark-main-color);
+                }
+            }
+
+            & > form > input[type="submit"] {
+                @include breakpoint($mobile-break-point) {
+                    margin: auto;
+                }
+                width: calc(70% + 24px);
+                height: 40px;
+                border-radius: 5px;
+                padding: 0 10px;
+                color: black;
+                background: $dark-main-color;
+                border: none;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: 2%;
+                transition: background-color 0.5s;
+                transition: transform 0.5s;
+                @include custom-box-shadow(0px, 10px, 20px, -8px, $dark-main-color);
+                &:hover {
+                    background: lighten($dark-main-color, 10);
+                    transition: background-color 0.5s;
+                }
+                &:active {
+                    @include custom-box-shadow(0px, 10px, 20px, -5px, $dark-main-color);
+                    transform: translate(0, 4px);
+                    transition: transform 0.5s;
+                }
+            }
+        }
+    }
+    div#seprator{
+        width: 90%;
+        height: 3px;
+        background-color: #eaeaea;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
