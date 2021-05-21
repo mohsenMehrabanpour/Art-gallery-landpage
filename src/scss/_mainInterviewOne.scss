@@ -1,6 +1,6 @@
 body {
     #{selector-unify("section","#main-interview-one")} {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-wrap: wrap;
         box-sizing: border-box;
@@ -72,6 +72,7 @@ body {
             color: lighten($body-font-color, 20);
             font-size: 20px;
             font-weight: bold;
+            padding-bottom: 16%;
             @include breakpoint($mobile-break-point){
                 padding: 20px 10% 0 10%;
                 text-align: center;

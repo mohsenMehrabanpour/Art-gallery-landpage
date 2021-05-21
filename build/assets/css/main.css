@@ -334,7 +334,7 @@ body header section.images-section .spatio-ratio .img-2 {
 }
 
 body section#main-interview-one {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -420,6 +420,7 @@ body section#main-interview-one > div.description-container p.description {
   color: #777777;
   font-size: 20px;
   font-weight: bold;
+  padding-bottom: 16%;
 }
 @media only screen and (max-width: 800px) {
   body section#main-interview-one > div.description-container p.description {
@@ -430,7 +431,7 @@ body section#main-interview-one > div.description-container p.description {
 }
 
 body section#main-interview-two {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
 }
 body section#main-interview-two div.content {
@@ -529,7 +530,7 @@ body section#main-interview-two div.content > div.description-container > p.desc
 }
 
 body section#main-interview-three {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #faf5ef;
   display: flex;
   flex-wrap: wrap;
@@ -602,7 +603,6 @@ body section#main-interview-three > div.right-side {
 body section#main-interview-three > div.right-side > div.img-container {
   height: 100%;
   width: 99%;
-  position: absolute;
   right: 0;
   border-radius: 50% 0 0 50%;
   overflow: hidden;
@@ -622,7 +622,7 @@ body section#main-interview-three > div.right-side > div.img-container > img {
 }
 
 body section#table-part {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -664,7 +664,7 @@ body section#table-part > div.container > table > thead > tr > th, body section#
 }
 
 body section#gallery-part {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   background-color: #faf5ef;
   justify-content: center;
@@ -691,6 +691,7 @@ body section#gallery-part > div.content-container > h1.sub-title {
     margin-bottom: 30%;
     font-size: 20px;
     text-align: center;
+    margin-bottom: 2%;
   }
 }
 body section#gallery-part > div.content-container > div.gallery-container {

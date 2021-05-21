@@ -1,6 +1,6 @@
 body {
     #{selector-unify("section","#main-interview-two")} {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
 
         & div.content {

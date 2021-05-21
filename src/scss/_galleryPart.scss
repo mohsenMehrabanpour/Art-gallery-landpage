@@ -1,6 +1,6 @@
 body {
     #{selector-unify("section" , "#gallery-part")} {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         background-color: $light-main-color;
         justify-content: center;
@@ -24,6 +24,7 @@ body {
                     margin-bottom: 30%;
                     font-size: 20px;
                     text-align: center;
+                    margin-bottom: 2%;
                 }
             }
             & > div.gallery-container {

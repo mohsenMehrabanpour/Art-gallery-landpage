@@ -1,6 +1,6 @@
 body {
     #{selector-unify("section","#main-interview-three")} {
-        height: 100vh;
+        min-height: 100vh;
         background-color: $light-main-color;
         display: flex;
         flex-wrap: wrap;
@@ -63,7 +63,7 @@ body {
                 & > div.img-container {
                     height: 100%;
                     width: 99%;
-                    position: absolute;
+                    // position: absolute;
                     right: 0;
                     border-radius: 50% 0 0 50%;
                     @include breakpoint($mobile-break-point) {
