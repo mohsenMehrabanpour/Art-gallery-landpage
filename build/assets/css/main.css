@@ -445,6 +445,11 @@ body section#main-interview-two div.content > div.pictures-container {
   margin-bottom: 8%;
   justify-content: center;
 }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  body section#main-interview-two div.content > div.pictures-container {
+    padding-top: 5%;
+  }
+}
 body section#main-interview-two div.content > div.pictures-container > div.spatio-ratio-circle {
   width: 15%;
   display: inline-block;
@@ -526,6 +531,11 @@ body section#main-interview-two div.content > div.description-container > p.desc
   body section#main-interview-two div.content > div.description-container > p.description {
     font-size: 16px;
     padding: 0 10%;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  body section#main-interview-two div.content > div.description-container > p.description {
+    padding-bottom: 10%;
   }
 }
 
@@ -691,7 +701,7 @@ body section#gallery-part > div.content-container > h1.sub-title {
     margin-bottom: 30%;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
   }
 }
 body section#gallery-part > div.content-container > div.gallery-container {
@@ -716,6 +726,11 @@ body section#gallery-part > div.content-container > div.gallery-container > div.
 @media only screen and (max-width: 800px) {
   body section#gallery-part > div.content-container > div.gallery-container > div.gallery-pic {
     width: 50%;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  body section#gallery-part > div.content-container > div.gallery-container > div.gallery-pic {
+    width: 25%;
   }
 }
 body section#gallery-part > div.content-container > div.gallery-container > div.gallery-pic > div.element {

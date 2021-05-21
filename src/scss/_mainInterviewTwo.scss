@@ -12,6 +12,9 @@ body {
                 display: flex;
                 margin-bottom: 8%;
                 justify-content: center;
+                @include landscapebp(){
+                    padding-top: 5%;
+                }
                 & > div.spatio-ratio-circle {
                     width: 15%;
                     @include breakpoint($mobile-break-point) {
@@ -88,6 +91,9 @@ body {
                     @include breakpoint($mobile-break-point) {
                         font-size: 16px;
                         padding: 0 10%;
+                    }
+                    @include landscapebp(){
+                        padding-bottom: 10%;
                     }
                 }
             }
